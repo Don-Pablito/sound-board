@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Soundboard secret edition</title>
+        <link rel="icon" href="img/G.ico"/>
+        <link rel="stylesheet" href="Soundboard.css">
+    </head>
+
+    <body id="fond">
+        <!-- entête -->
+        <img id="logo" src="img/logo.png">
+
+        <!-- contenu -->
+        <script type="text/javascript" src="S1.js"></script>
+        <div id="content" align="center"></div>
+
+        <a href="#logo" id="up"><img src="img/fleche.png"></a>
+    </body>
+    
+    <!-- bon script -->
+    <script type="text/javascript">
+    
+        
+
+        
+        window.onload = Start;
+
+        function son(PlaySon) 
+        {
+            var audioElement = new Audio(PlaySon);
+            audioElement.play();
+        }
+
+        function Start()
+        {
+            var div = document.getElementById("content");
+            var cptBtn = 0;
+            var SetBoutons = " ";
+            while (sons.length > cptBtn)
+            {
+                SetBoutons = SetBoutons + "<img class=\"btn\" onclick=\"son('assets/sounds/"+sons[cptBtn]+"')\" src=\"assets/img/"+pics[cptBtn]+"\">";
+                cptBtn ++;
+            }
+            
+            div.innerHTML = SetBoutons;
+        }
+        
+    </script>
+</html>
